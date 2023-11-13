@@ -13,12 +13,12 @@ function pinCodes(input) {
     let isValid3 = true
 
     for (let i = 1; i <= firstNum; i++) {
-       
+
         if (i % 2 === 0) {
             isValid1 = true
             result1 = String(i)
-            
-        } else { 
+
+        } else {
             isValid1 = false
             continue
         }
@@ -27,9 +27,9 @@ function pinCodes(input) {
             if (y === 2 || y === 3 || y === 5 || y === 7) {
                 isValid2 = true
                 result2 = String(y)
-                
-            } else { 
-                   isValid2 = false  
+
+            } else {
+                isValid2 = false
                 continue
             }
 
@@ -37,18 +37,18 @@ function pinCodes(input) {
                 if (z % 2 === 0) {
                     isValid3 = true
                     result3 = String(z)
-                   
-                    if (isValid1 && isValid2 && isValid3){
+
+                    if (isValid1 && isValid2 && isValid3) {
                         console.log(`${result1} ${result2} ${result3}`);
                     }
-                    
+
                 } else {
-                   
-                   isValid3 = false
+
+                    isValid3 = false
                     continue
                 }
             }
         }
     }
 }
-    pinCodes(['3', '5', '5'])
+pinCodes(['3', '5', '5'])

@@ -2,7 +2,7 @@ function touristShop(input) {
     let budget = Number(input[0]);
     let i = 1
     let command = input[i];
-    
+
     let productCounter = 0
     let productPrice = 0
 
@@ -13,7 +13,7 @@ function touristShop(input) {
     while (command !== 'Stop') {
         let productName = command
         i++
-        
+
         productCounter++
 
         productPrice = Number(input[i])

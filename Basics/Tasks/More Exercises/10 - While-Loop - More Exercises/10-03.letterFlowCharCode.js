@@ -1,5 +1,5 @@
 function letterFlowChar(input) {
-    
+
     let command = input[0];
     let i = 1
 
@@ -12,10 +12,8 @@ function letterFlowChar(input) {
     while (command !== 'End') {
         let currentSymbol = command;
 
-        
+
     }
-
-
 
 }
 letterFlowChar([

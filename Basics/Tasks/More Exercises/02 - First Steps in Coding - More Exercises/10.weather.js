@@ -1,5 +1,5 @@
 function weather(input) {
-    
+
     let degr = Number(input[0]);
 
     if (degr > 35) {

@@ -50,7 +50,7 @@ function letters(input) {
         }
 
     }
-    
+
 
     console.log(`${string}${count}`);
 

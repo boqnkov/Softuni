@@ -82,7 +82,7 @@ function letterFlow(input) {
             cCounter = 0
             nCounter = 0
             oCounter = 0
-        
+
             text += (`${word} `);
             word = ''
         }
@@ -92,9 +92,9 @@ function letterFlow(input) {
         if (command === 'End') {
             break;
         }
-        
+
     }
-    console.log(text);  
+    console.log(text);
 }
 letterFlow([
     'H',

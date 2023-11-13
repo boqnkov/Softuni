@@ -15,7 +15,7 @@ function secretDoor(input) {
                     if (y % p === 0 && p !== y) {
                         isValid = false
                     }
-  
+
                 }
 
                 if (isValid) {

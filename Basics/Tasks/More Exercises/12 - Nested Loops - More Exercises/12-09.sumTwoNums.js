@@ -18,7 +18,6 @@ function sum(input) {
     }
     console.log(`${counter} combinations - neither equals ${magicNum}`);
 
-
 }
 sum(['23',
     '24',

@@ -20,7 +20,7 @@ function pinCodes(input) {
         }
 
         for (let y = 2; y <= secondNum; y++) {
-           
+
             if (y === 2 || y === 3 || y === 5 || y === 7) {
                 result2 = y;
             } else {
@@ -28,7 +28,7 @@ function pinCodes(input) {
             }
 
             for (let z = 1; z <= thirdNum; z++) {
-                
+
                 if (z % 2 === 0) {
                     result3 = z;
                     console.log(`${result1} ${result2} ${result3}`);

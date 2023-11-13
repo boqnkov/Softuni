@@ -3,8 +3,8 @@ function backToThePast(input) {
     let money = Number(input[0]);
     let year = Number(input[1]);
     let moneyleft = money
-    
-    
+
+
     for (let y = 1800; y <= year; y++) {
         if (y % 2 === 0) {
             moneyleft -= 12000

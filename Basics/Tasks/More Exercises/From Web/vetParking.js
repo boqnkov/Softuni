@@ -22,7 +22,6 @@ function vetParking(input) {
         daySum = 0
     }
 
-
     console.log(`total ${sum}`);
 
 }

@@ -22,6 +22,5 @@ function nums(input) {
 
 
     console.log(string);
-
 }
 nums(["3"]);

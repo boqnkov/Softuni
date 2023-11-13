@@ -12,7 +12,7 @@ function happyCat(input) {
             } else if (x % 2 === 1 && y % 2 === 0) {
                 pricePerDay += 1.25
             } else {
-                pricePerDay += 1  
+                pricePerDay += 1
             }
         }
         console.log(`Day: ${x} - ${pricePerDay.toFixed(2)} leva`);
