@@ -1,0 +1,11 @@
+h1 {
+    color: dodgerblue;
+}
+ul {
+    list-style:square ;
+}
+.site-content{
+    width: 400px;
+    margin: left;
+
+}
