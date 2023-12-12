@@ -9,3 +9,15 @@ ul {
     margin: left;
 
 }
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+div {
+    display: inline-block;
+    width: 200px;
+    margin: auto;
+    
+}
