@@ -4,6 +4,7 @@ function calculator(numOne, numTwo, operator) {
     let addResult = (a, b) => a + b
     let subtractResult = (a, b) => a - b
     let result = 0
+    
     switch (operator) {
         case 'multiply': result = multiplyResult(numOne, numTwo); break;
         case 'divide': result =divideResult(numOne, numTwo); break
