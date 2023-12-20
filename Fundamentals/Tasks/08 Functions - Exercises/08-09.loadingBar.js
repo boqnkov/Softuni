@@ -1,7 +1,9 @@
 function loadingBar(num) {
+
     let percent = `${num}%`
     let forPrint = loading(num)
-    if (percent == 100){
+
+    if (percent == 100) {
         console.log(`100% Complete!`);
         console.log(`[%%%%%%%%%%]`);
     } else {
@@ -9,10 +11,10 @@ function loadingBar(num) {
         console.log(`Still loading...`);
     }
 
-    function loading(bar){
+    function loading(bar) {
         let result = []
-        for (let i=1; i<=10; i++){
-            if (i<=bar/10){
+        for (let i = 1; i <= 10; i++) {
+            if (i <= bar / 10) {
                 result.push('%')
             } else {
                 result.push('.')
