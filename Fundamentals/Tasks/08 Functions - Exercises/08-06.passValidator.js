@@ -24,7 +24,7 @@ function passvalidator(password) {
         
         for (let curSym of password){
             let asciiCurSym = curSym.charCodeAt()
-            if (!((asciiCurSym>48 && asciiCurSym<57) || (asciiCurSym>65 && asciiCurSym<90) || (asciiCurSym>97 && asciiCurSym<122)) ){
+            if (!((asciiCurSym>=48 && asciiCurSym<=57) || (asciiCurSym>=65 && asciiCurSym<=90) || (asciiCurSym>=97 && asciiCurSym<=122)) ){
                 console.log(`Password must consist only of letters and digits`);
                 return false
             }
@@ -49,4 +49,4 @@ function passvalidator(password) {
         }
     }
 }
-passvalidator('logI32n%')
+passvalidator('logI32n')
