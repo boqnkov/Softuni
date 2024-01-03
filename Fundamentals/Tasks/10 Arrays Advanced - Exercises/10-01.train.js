@@ -1,4 +1,5 @@
 function train(arr) {
+    
     let wagons = arr.shift().split(' ').map(Number)
     let capacity = Number(arr.shift())
 
@@ -9,8 +10,10 @@ function train(arr) {
         if (tokenAsArr[0] == 'Add'){
             wagons.push(tokenAsArr[1])
         } else {
+           
             for (let j=0; j<wagons.length; j++){
                 let curWagon = wagons[j]
+                
                 if (curWagon+Number(tokenAsArr[0])<=capacity){
                     wagons[j]+=Number(tokenAsArr[0])
                     break
@@ -19,7 +22,6 @@ function train(arr) {
         }
     }
     console.log(wagons.join(' '));
-
 
 }
 
