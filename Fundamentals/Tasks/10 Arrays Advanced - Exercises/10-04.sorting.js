@@ -1,4 +1,5 @@
 function sorting(arr) {
+    
     let sortedArr = arr.sort((a,b) => a-b)
     let finalArr = []
 
