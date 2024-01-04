@@ -1,22 +1,23 @@
 function houseParty(arr) {
     let output = []
 
-    for (let i=0; i<arr.length; i++){
-        let command = arr[i];
+    for (let command of arr){
+        
         let token = command.split(' ');
-
-        if (token.length == 3){
-            if (output.includes(token[0])){
-                output.unshift(`${token[0]} is already in the list!`)
+        let name = token[0]
+        if (token.includes('not')){
+            if (output.includes(name)){
+                let index = output.indexOf(name)
+                output.splice(index, 1)
             } else {
-                output.push(token[0])
+
+                console.log(`${name} is not in the list!`);
             }
         } else {
-            if (output.includes(token[0])){
-               let deletedIndex = output.indexOf(token[0])
-                output.splice(deletedIndex, 1)
+            if (output.includes(name)){
+              console.log(`${name} is already in the list!`);
             } else {
-                output.unshift(`${token[0]} is not in the list!`)
+                output.push(name)
             }
         }
     }
