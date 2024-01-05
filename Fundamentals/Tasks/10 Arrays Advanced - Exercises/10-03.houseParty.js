@@ -1,12 +1,13 @@
 function houseParty(arr) {
     let output = []
 
-    for (let command of arr){
-        
+    for (let command of arr) {
+
         let token = command.split(' ');
         let name = token[0]
-        if (token.includes('not')){
-            if (output.includes(name)){
+        if (token.includes('not')) {
+            
+            if (output.includes(name)) {
                 let index = output.indexOf(name)
                 output.splice(index, 1)
             } else {
@@ -14,15 +15,15 @@ function houseParty(arr) {
                 console.log(`${name} is not in the list!`);
             }
         } else {
-            if (output.includes(name)){
-              console.log(`${name} is already in the list!`);
+            if (output.includes(name)) {
+                console.log(`${name} is already in the list!`);
             } else {
                 output.push(name)
             }
         }
     }
 
-   console.log(output.join('\n'));
+    console.log(output.join('\n'));
 }
 // houseParty(
 // [
@@ -32,8 +33,8 @@ function houseParty(arr) {
 // 'George is not going!']
 // )
 houseParty(['Tom is going!',
-'Annie is going!',
-'Tom is going!',
-'Garry is going!',
-'Jerry is going!']
+    'Annie is going!',
+    'Tom is going!',
+    'Garry is going!',
+    'Jerry is going!']
 )
