@@ -41,7 +41,7 @@ function manipulator(nums, commands) {
         } else if (action == 'sumPairs') {
             let newArr = []
 
-            for (i = 0; i < nums.length / 2; i += 2) {
+            for (i = 0; i < nums.length; i += 2) {
                 let pushedNum = nums[i] + nums[i + 1]
 
                 if (i + 1 < nums.length) {
@@ -52,7 +52,7 @@ function manipulator(nums, commands) {
             }
             nums = newArr
         } else if (action == 'print') {
-            console.log(`[ ${nums.join(', ')}]`);
+            console.log(`[ ${nums.join(', ')} ]`);
         }
     }
 }
