@@ -11,8 +11,8 @@ function inventory(array) {
         register.items = items;
 
         finalArr.push(register)
+        
     }
-
     finalArr.sort((a, b) => (a.level) - (b.level))
 
     for (let hero of finalArr) {
