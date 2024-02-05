@@ -6,7 +6,7 @@ function meetings(array) {
     for (let command of array) {
         let [day, name] = command.split(` `)
 
-        if (day in succesfulMeetings) {
+        if (succesfulMeetings.hasOwnProperty(day)) {
             console.log(`Conflict on ${day}!`)
             continue
         }
