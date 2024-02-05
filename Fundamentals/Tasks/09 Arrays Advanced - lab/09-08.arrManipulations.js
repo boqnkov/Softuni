@@ -1,47 +1,45 @@
-function arrManipulations(input) {
+function arrManipulations(commands) {
     
-    let arr = input
+    let arr = commands
     .shift()
     .split(' ')
+    .map(Number)
+
+    for (let i= 0; i<commands.length; i++){
+        let [command, firstNum, secondNum] = commands[i].split(' ')
+        firstNum = Number(firstNum);
+        secondNum = Number(secondNum);
+
+        switch (command){
+            case "Add":
+                arr.push(firstNum)
+                break;
+            case "Remove":
+                let index = arr.indexOf(firstNum)
+                arr.splice(index,1)
+                break;
+            case "RemoveAt":
+                arr.splice(firstNum,1)
+                break;
+            case "Insert":
+                arr.splice(secondNum, 0, firstNum)
+        }
+
+    }
     
-    let addNumAsStr = input[0];
-    let addNum = Number(addNumAsStr[4])
-    
-    arr.push(addNum)
-
-    let removeNumAsStr = input[1];
-    let removeNum = removeNumAsStr[7]
-    let indexOfRemove = arr.indexOf(removeNum);
-    arr.splice(indexOfRemove,1)
-    // let counter = 0
-    // for (let curElem of arr){
-        
-    //     if (curElem == removeNum){
-    //         arr.splice(counter,1)
-
-    //     }
-    //     counter++
-    // }
-    let removedElemAsStr = input[2];
-    let removedEl = removedElemAsStr[9];
-    arr.splice(removedEl,1);
-
-    let insertedNumAsStr = input[3];
-    let insertedNum = insertedNumAsStr[7];
-    let insertedIndex = insertedNumAsStr[9];
-    arr.splice(insertedIndex,0,insertedNum)
-    arr.map(x => Number(x));
-    
-
-
-
     console.log(arr.join(' '));
-    
-    
+  
 }
-arrManipulations(['4 19 2 53 6 43',
-'Add 3',
-'Remove 2',
-'RemoveAt 1',
-'Insert 8 3']
+// arrManipulations(['4 19 2 53 6 43',
+// 'Add 3',
+// 'Remove 2',
+// 'RemoveAt 1',
+// 'Insert 8 3']
+// )
+
+arrManipulations(['6 12 2 65 6 42',
+'Add 8',
+'Remove 12',
+'RemoveAt 3',
+'Insert 6 2']
 )
