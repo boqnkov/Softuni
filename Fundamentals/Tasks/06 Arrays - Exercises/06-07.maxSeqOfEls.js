@@ -13,7 +13,6 @@ function maxSeqOfEqEls(arr) {
             } else {
                 temporaryArr = []
                 temporaryArr.push(arr[i])
-
             }
         }
         if (winArr.length < temporaryArr.length) {
@@ -21,9 +20,9 @@ function maxSeqOfEqEls(arr) {
             temporaryArr = []
         }
     }
-    winArr.unshift(4,5)
+    
 
     console.log(winArr.join(' '));
 }
 maxSeqOfEqEls([2, 1, 1, 2, 3, 3, 2, 2, 2, 1])
-maxSeqOfEqEls([0, 1, 1, 5, 2, 2, 6, 3, 3])
+// maxSeqOfEqEls([0, 1, 1, 5, 2, 2, 6, 3, 3])
