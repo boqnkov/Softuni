@@ -1,21 +1,24 @@
 function dictionary(arr) {
     
-    let sortedArr = arr.sort((a,b) => a.localeCompare(b))
+    // let sortedArr = arr.sort((a,b) => a.localeCompare(b))
     
     let object = {}
     
-    for (let curObj of sortedArr){
+    for (let curObj of arr){
         let parsedObj = JSON.parse(curObj)
         let term = Object.keys(parsedObj)[0]
         let definition = Object.values(parsedObj)[0]
         object[term] = definition 
     }
     
+    let entries = Object.entries(object)
+    entries.sort((a, b) => a[0].localeCompare(b[0]))
 
+    entries.forEach((i) => console.log(`Term: ${i[0]} => Definition: ${i[1]}`) )
 
-    for (let term of Object.keys(object)){
-        console.log(`Term: ${term} => Definition: ${object[term]}`);
-    }
+    // for (let term of Object.keys(object)){
+    //     console.log(`Term: ${term} => Definition: ${object[term]}`);
+    // }
     
 }
 
