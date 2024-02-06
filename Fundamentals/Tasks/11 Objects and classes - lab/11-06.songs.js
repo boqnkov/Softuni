@@ -8,6 +8,7 @@ function songs(arr) {
         typeList
         name
         time
+
         constructor(typeList, name, time) {
             this.typeList = typeList;
             this.name = name;
@@ -22,7 +23,7 @@ function songs(arr) {
         songsArr.push(song)
     }
 
-    if (typeList == 'all'){
+    if (typeList == 'all') {
         songsArr.forEach((i) => console.log(i.name))
     } else {
         let filtered = songsArr.filter((i) => i.typeList == typeList);
