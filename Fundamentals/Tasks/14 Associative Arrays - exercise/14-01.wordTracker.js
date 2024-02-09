@@ -17,11 +17,6 @@ function wordTracker(arr) {
     entries.sort((a,b) => b[1] - (a[1]))
 
     entries.forEach((a) => console.log(`${a[0]} - ${a[1]}`))
-    // console.log(entries);
-
-
-
-
 
 }
 wordTracker([
