@@ -14,9 +14,8 @@ function wordTracker(arr) {
     }
 
     let entries = Object.entries(occurrences)
-    entries.sort((a,b) => b[1] - (a[1]))
-
-    entries.forEach((a) => console.log(`${a[0]} - ${a[1]}`))
+                        .sort((a,b) => b[1] - (a[1]))
+                        .forEach((a) => console.log(`${a[0]} - ${a[1]}`))
 
 }
 wordTracker([
