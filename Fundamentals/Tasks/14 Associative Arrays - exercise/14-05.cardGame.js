@@ -1,67 +1,37 @@
 function cardGame(arr) {
 
-    let finalResult = {};
+    let playerCards = {};
+    let powerValues = { 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, J: 11, Q: 12, K: 13, A: 14 }
+    let typesValues = { S: 4, H: 3, D: 2, C: 1 }
 
-    for (let command of arr) {
-        let [name, cards] = command.split(': ');
-        let powerOfCards = cards.split(', ')
+    for (let playerDeck of arr) {
+        let [name, cardsStr] = playerDeck.split(': ');
+        let cards = cardsStr.split(', ')
 
-        if (!(name in finalResult)) {
-            finalResult[name] = powerOfCards
+        if (name in playerCards) {
+            playerCards[name].push(...cards);
         } else {
-            for (let curCard of powerOfCards) {
-                finalResult[name].push(curCard)
-            }
+            playerCards[name] = cards;
         }
     }
 
-    for (let cards of Object.keys(finalResult)){
-        let uniqueCards = new Set(cards)
-        finalResult = uniqueCards
-        
-    }
+    let entries = Object.entries(playerCards);
 
+    for (let [name, deck] of entries) {
+        let uniqueCards = new Set(deck);
+        let deckValue = 0;
 
+        for (let card of uniqueCards) {
+            let power = card.slice(0, card.length - 1)
+            let type = card[card.length - 1]
 
-    for (let curCard of powerOfCards) {
-        let curCardAsArr = curCard.split('')
-        let type = curCardAsArr.pop()
-        let powerAsSybmol = curCardAsArr.join('')
-        let power = 0
-        let typePower = 0
-        if (type == 'S') {
-            typePower = 4
-        } else if (type == 'H') {
-            typePower = 3
-        } else if (type == 'D') {
-            typePower = 2
-        } else if (type == 'C') {
-            typePower = 1
+            let cardValue = powerValues[power] * typesValues[type];
+            deckValue += cardValue
         }
-
-        if (powerAsSybmol == 'J') {
-            power = 11
-        } else if (powerAsSybmol == 'Q') {
-            power = 12
-        } else if (powerAsSybmol == 'K') {
-            power = 13
-        } else if (powerAsSybmol == 'A') {
-            power = 14
-        } else {
-            power = Number(powerAsSybmol)
-        }
-        let powerOfCurCard = typePower * power
-
-        finalResult[name] += powerOfCurCard
+        console.log(`${name}: ${deckValue}`);
     }
 
 
-
-
-    let entries = Object.entries(finalResult)
-    for (let [name, result] of entries) {
-        console.log(`${name}: ${result}`);
-    }
 
 }
 cardGame([
