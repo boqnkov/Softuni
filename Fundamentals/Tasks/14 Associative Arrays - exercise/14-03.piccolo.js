@@ -5,9 +5,9 @@ function piccolo(input) {
     for (let carAction of input) {
         let [action, number] = carAction.split(', ');
         if (action == 'IN') {
-            parkingStatus[number] = 1
+            parkingStatus[number] = 1;
         } else {
-            parkingStatus[number] = 0
+            parkingStatus[number] = 0;
         }
     }
     if (Object.values(parkingStatus).includes(1)) {
@@ -15,7 +15,6 @@ function piccolo(input) {
             .filter(car => car[1] == 1)
             .sort((a, b) => a[0].localeCompare(b[0]))
             .forEach(a => console.log(a[0]))
-
 
     } else {
         console.log('Parking Lot is Empty');
