@@ -1,0 +1,55 @@
+Arrays
+
+arr.push(50);     // Adds an element at the end
+arr.includes(20)  // true or false
+arr.join(':')   - creates a string separated by a symbol
+arr.pop() - removes from the end of the array and return it
+arr.shift() - removes from the start of the array and return it
+arr.unshift(15) - adds at the start of the array
+arr.indexOf('Mary') - returns the index of element / return -1 if the value is not found
+arr.reverse() - return the array reversed
+arr.forEach((element) => console.log(element))
+arr.push(...arr1) - push all elements of arr1 in arr
+
+let arr = [1,2,3,4,5,6]
+
+let sliced = arr.slice(2)  // [3,4,5,6]
+let sliced = arr.slice(2,4)  // [3,4]
+(from selected start to end (exclusively))
+WITH SLICE ORIGINAL ARRAY WILL NOT BE MODIFIED
+
+let spliced = arr.splice(2,3) (start index, delete count) // [ 3,4,5 ]  arr// [1,2,6]
+Remove 0 (zero) elements before index 2, and insert "drum" (2,0,'drum')
+Remove 0 (zero) elements before index 2, and insert "drum" and "guitar"  (2,0,'drum','guitar')
+Remove 1 element at index 3 (3,1)
+Remove 1 element at index 2, and insert "trumpet" (2,1,'trumpet')
+Remove 2 elements from index 0, and insert "parrot", "anemone" and "blue" (0,2,"parrot","anemone","blue")
+Remove 3 elements starting from index 2 (2,3)
+Remove all elements, starting from index 2 (2)
+SPLICE CHANGES THE ORIGINAL ARRAY
+
+MAP - creates new array
+let numsAsStrings = ["5","3","14","-2","8"];
+let nums = numsAsStrings.map(Number);
+console.log(nums); // [5, 3, 14, -2, 8]
+let incr = nums.map(x => x+1);
+console.log(incr); // [6, 4, 15, -1, 9]
+
+Filter
+let myArr = ['one', 'two', 'three', 'four'];
+let longWords = myArr.filter(x => x.length > 3);
+console.log(longWords); // ['three','four']
+
+let nums = [5, -11, 3, -2, 8]
+let positiveNums = nums.filter(x => x > 0);
+console.log(positiveNums); // [5, 3, 8]
+
+Sort
+let nums = [20, 40, 10, 30, 100, 5];
+nums.sort((a, b) => a-b); // Compare elements as numbers
+console.log(nums.join('|')); // 5|10|20|30|40|100
+
+let words = ['nest', 'Eggs', 'bite', 'Grip', 'jAw'];
+words.sort((a, b) => a.localeCompare(b));
+console.log(words);
+// ['bite', 'Eggs', 'Grip', 'jAw', 'nest']
