@@ -31,10 +31,6 @@ function travelTime(input) {
 
         console.log(row);
     }
-
-
-    
-
 }
 travelTime([
     "Bulgaria > Sofia > 500",
