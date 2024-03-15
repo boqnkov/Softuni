@@ -53,3 +53,6 @@ let words = ['nest', 'Eggs', 'bite', 'Grip', 'jAw'];
 words.sort((a, b) => a.localeCompare(b));
 console.log(words);
 // ['bite', 'Eggs', 'Grip', 'jAw', 'nest']
+
+data.sort((a, b) => a[count] - b[count] || a[year] - b[year])   - if array with objects
+data.sort((a, b) => a[0] - b[0] || a[1] - b[1])   - if array with arrays
