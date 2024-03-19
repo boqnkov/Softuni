@@ -9,7 +9,7 @@ function race(input) {
 
     while (command != 'end of race') {
         let name = command.match(namePattern).join('')
-        let km = (command.match(kmPattern).map(Number).reduce((a,b) => a+b, 0 ))
+        let km = command.match(kmPattern).map(Number).reduce((a,b) => a+b)
 
         if (name in participantsObject){
             participantsObject[name]+=km
