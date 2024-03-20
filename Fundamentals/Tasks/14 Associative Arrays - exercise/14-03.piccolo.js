@@ -3,13 +3,16 @@ function piccolo(input) {
     let parkingStatus = {};
 
     for (let carAction of input) {
+
         let [action, number] = carAction.split(', ');
+
         if (action == 'IN') {
             parkingStatus[number] = 1;
         } else {
             parkingStatus[number] = 0;
         }
     }
+
     if (Object.values(parkingStatus).includes(1)) {
         let entries = Object.entries(parkingStatus)
             .filter(car => car[1] == 1)
