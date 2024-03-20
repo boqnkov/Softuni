@@ -62,23 +62,7 @@ function arenaTier(input) {
     
 
     let sortedTechniques = {}
-    for (let entry in gladiatorPool){
-        let entriesFromPool = Object.values(entry)
-        sortedTechniques[entriesFromPool[0][0]] = sorted
-    }
-    let techentries = Object.entries(entry[1])
-    let techsorted = techentries.sort((a,b) => (b[1] - a[1]) || (a[0].localeCompare(b[0])))
-
-    for (let [gladiator, totalSkill] of sorted) {
-        console.log(`${gladiator}: ${totalSkill} skill`);
-
-        for (let technique in sortedTechniques){
-            console.log(sortedTechniques);
-            let tech = sortedTechniques[technique][0][0];
-            let techSkill = sortedTechniques[technique][0][1]
-            console.log(`- ${tech} <!> ${techSkill}`);
-        }
-    }
+    
 
 }
 arenaTier([
