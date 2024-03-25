@@ -1,6 +1,6 @@
 function adAstra(input) {
-    let pattern = /([\|#])(?<name>[A-Za-z ]+)\1(?<date>\d\d\/\d\d\/\d\d)\1(?<kCal>\d{0,5})\1/g
 
+    let pattern = /([\|#])(?<name>[A-Za-z ]+)\1(?<date>\d\d\/\d\d\/\d\d)\1(?<kCal>\d{1,5})\1/g
 
     let totalCal = 0
     let arrayForPrint = [];
