@@ -11,8 +11,8 @@ function barIncome(input) {
         let match = command.match(pattern);
 
         if (match) {
-            
-            let {name, product, count, price} = match.groups
+
+            let { name, product, count, price } = match.groups
 
             let curPrice = Number(count) * Number(price);
             totalPrice += curPrice;
@@ -20,7 +20,6 @@ function barIncome(input) {
             console.log(`${name}: ${product} - ${curPrice.toFixed(2)}`);
 
         }
-
 
         command = input.shift()
 
