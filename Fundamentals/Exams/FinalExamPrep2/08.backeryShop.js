@@ -4,14 +4,15 @@ function bakeryShop(input) {
 
     let command = input.shift();
 
-    let [action, qty, food] = command.split(' ')
-    qty = Number(qty)
+    let action = command.shift()
 
     let soldGoods = 0
 
     while (action != 'Complete') {
-        [action, qty, food] = command.split(' ')
+
+        let [qty, food] = command.split(' ')
         qty = Number(qty)
+
         if (action == 'Receive') {
 
             if (qty > 0) {
@@ -22,7 +23,9 @@ function bakeryShop(input) {
 
             if (!(food in shopInfo)) {
                 console.log(`You do not have any ${food}.`);
+
             } else {
+
                 if (qty > shopInfo[food]) {
                     console.log(`There aren't enough ${food}. You sold the last ${shopInfo[food]} of them.`);
                     soldGoods += shopInfo[food]
@@ -31,6 +34,7 @@ function bakeryShop(input) {
                     shopInfo[food] -= qty
                     console.log(`You sold ${qty} ${food}.`);
                     soldGoods += qty
+
                     if (shopInfo[food] == 0) {
                         delete shopInfo[food]
                     }
