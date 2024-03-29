@@ -18,7 +18,7 @@ function mirrorWords(input) {
     if (wordCounter > 0) {
         console.log(`${wordCounter} word pairs found!`);
     } else {
-        console.log(`No mirror words!`);
+        console.log(`No word pairs found!`);
     }
     if (mirrorWords.length != 0) {
         console.log(`The mirror words are:`);
