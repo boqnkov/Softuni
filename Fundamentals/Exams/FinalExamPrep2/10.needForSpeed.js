@@ -2,6 +2,7 @@ function needForSpeed(input) {
     let carsNum = Number(input.shift());
     let cars = {};
     let command = input.shift()
+
     for (let i = 0; i < carsNum; i++) {
         command = command.split('|')
         let car = command[0];
@@ -42,16 +43,18 @@ function needForSpeed(input) {
                 let diff = (fuel + cars[car]['fuel']) - 75
                 let filled = fuel - diff
                 console.log(`${car} refueled with ${filled} liters`);
+                cars[car]['fuel'] = 75
             } else {
                 console.log(`${car} refueled with ${fuel} liters`);
+                cars[car]['fuel']+=fuel
 
             }
 
         } else if (action == 'Revert'){
             let car = command[1];
             let km = Number(command[2]);
-
             cars[car]['mileage']-=km;
+            
             if (cars[car]['mileage']>= 10000){
                 console.log(`${car} mileage decreased by ${km } kilometers`);
             } else {
@@ -68,11 +71,8 @@ function needForSpeed(input) {
         let curCar = car
         let mileage = cars[car]['mileage']
         let fuel = cars[car]['fuel']
-        console.log(`${curCar} -> Mileage: ${mileage} kms, Fuel in the tank: ${fuel} lt."`);
+        console.log(`${curCar} -> Mileage: ${mileage} kms, Fuel in the tank: ${fuel} lt.`);
     }
-
-
-
 }
 needForSpeed([
     '3',
