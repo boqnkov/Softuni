@@ -56,3 +56,13 @@ console.log(words);
 
 data.sort((a, b) => a[count] - b[count] || a[year] - b[year])   - if array with objects
 data.sort((a, b) => a[0] - b[0] || a[1] - b[1])   - if array with arrays
+
+const array1 = [1, 2, 3, 4];
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+console.log(sumWithInitial);
+// Expected output: 10
