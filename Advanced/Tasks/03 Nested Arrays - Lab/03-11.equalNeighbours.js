@@ -16,8 +16,8 @@ function equalNeighbours(matrix) {
     console.log(counter);
 }
 equalNeighbours([['test', 'yes', 'yo', 'ho'],
-                ['well', 'done', 'yo', '6'],
-                ['not', 'done', 'yet', 'yet']]
+['well', 'done', 'yo', '6'],
+['not', 'done', 'yet', 'yet']]
 )
 
 // equalNeighbours([['2', '3', '4', '7', '0'],
