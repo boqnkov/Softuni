@@ -1,4 +1,15 @@
 function ticTacToe(arr) {
+    
+    // const board = new Array(3).fill().map(() => new Array(3).fill(false))
+
+    // board // [[false, false, false],
+    //         [false, false, false],
+    //         [false, false, false]]
+    
+    
+    
+    
+    
     let dashboard = [[false, false, false],
     [false, false, false],
     [false, false, false]]
