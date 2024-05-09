@@ -1,9 +1,14 @@
-function objectFactory(input) {
-    let result = [];
+function factory(library, orders) {
+    const result = [];
 
     for (let order of orders){
-        {template}
+        const current = Object.assign({}, order.template);
+        for (let part of order.parts){
+          current[part] = library[part]
+        }
+        result.push(current)
     }
+    return result
 }
 
 
@@ -38,5 +43,5 @@ const library = {
     }
   ];
   const products = factory(library, orders);
-  console.log(products);
+  console.table(products);
   
