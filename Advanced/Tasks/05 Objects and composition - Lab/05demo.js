@@ -14,4 +14,20 @@ const person2 = {
     sayHello
 }
 
+const fs = require('fs');
+
+
 person2.sayHello()
+
+const personAsString = JSON.stringify(person)
+console.log(typeof personAsString);
+console.log(personAsString)
+
+const json = '{"name":"Peter", "age": 28}';
+const parsed = JSON.parse(json)
+console.log('---------');
+console.log(typeof json);
+console.log(json);
+
+
+fs.writeFileSync('./data.json', personAsString)
