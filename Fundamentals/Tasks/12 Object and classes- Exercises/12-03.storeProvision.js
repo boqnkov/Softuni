@@ -23,7 +23,7 @@ function storeProvision(arr1,arr2) {
             products[curProduct] = qty
         }
     }
-    console.table(products);
+  
 
     let entries = Object.entries(products);
 
