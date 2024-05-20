@@ -9,7 +9,6 @@ function storeCatalogue(input) {
     }
 
     let sorted = result.sort((a,b) => a.product.localeCompare(b.product))
-    console.log(sorted);
 
     let symbol = '';
 
@@ -21,9 +20,6 @@ function storeCatalogue(input) {
 
         console.log(`  ${line.product}: ${line.price}`);
     }
-
-
-
 }
 storeCatalogue(['Appricot : 20.4',
 'Fridge : 1500',
