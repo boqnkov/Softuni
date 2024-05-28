@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">Hello Worlld</h1>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, cumque.</p>
+
+    <h3 class="heading">Shoping List</h3>
+
+    <ul class="me">
+
+        <li>bread</li>
+        <li>eggs</li>
+        <li id="favourite food">meat</li>
+        <li>vegetabels</li>
+
+        <script>
+
+            let favouriteFoodLiElement = document.getElementById('favourite food')
+
+            console.log(favouriteFoodLiElement.textContent);
+            setTimeout(() => {
+
+                favouriteFoodLiElement.textContent = 'Steak';
+            }, 3000)
+
+            let liElements = document.getElementsByTagName('li')
+            console.log(liElements);
+
+            let headingElements = document.getElementsByClassName('heading')
+            console.log(headingElements[0]);
+
+            let listHeadingElement = document.querySelector('h3.heading')
+            console.log(listHeadingElement);
+
+            let shopingListElemets = document.querySelectorAll('.me li')
+            console.log(shopingListElemets);
+
+            let liElArr = Array.from(shopingListElemets)
+            console.log(liElArr);
+
+            let shopingEl = favouriteFoodLiElement.parentElement
+            console.log(shopingEl);
+
+            let shopingELS = shopingEl.children
+            console.log(shopingELS);
+
+        </script>
+
+    </ul>
+</body>
+
+</html>
