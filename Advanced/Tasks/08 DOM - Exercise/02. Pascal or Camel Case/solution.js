@@ -1,35 +1,29 @@
 function solve() {
 
-  let firstParamRef = document.getElementById("text").value
-  let secondParamRef = document.getElementById("naming-convention").value
-  let resultRef = document.getElementById("result")
+  const resultRef = document.getElementById("result")
+  let textValue = document.getElementById("text").value
+  let convention = document.getElementById("naming-convention").value
+  textValue = textValue.toLowerCase()
+  let result = "";
 
+  switch (convention) {
+    case "Camel Case":
+      textArr = textValue.split(" ");
+      result = textArr.shift();
+      textArr.forEach(word => {
+        result += word[0].toUpperCase() + word.substring(1).toLowerCase()
+      })
+      break;
 
-  let convertedText = firstParamRef.toLowerCase()
-  let result = ''
+    case "Pascal Case":
+      textValue.split(" ").forEach(word => {
+        result += word[0].toUpperCase() + word.substring(1)
+      })
+      break;
 
-  if (secondParamRef == "Camel Case") {
-
-    let words = convertedText.split(' ')
-    let curWord = words.shift()
-    result += curWord
-
-    while (words) {
-      curWord = words.shift();
-      let addedWord = curWord[0].toUpperCase() + curWord.slice(1)
-      result += addedWord
-    }
-  } else if (secondParamRef == "Pascal Case") {
-    let words = convertedText.split(' ')
-
-
-    while (words) {
-      let curWord = words.shift();
-      let addedWord = curWord[0].toUpperCase() + curWord.slice(1)
-      result += addedWord
-    }
-  } else {
-    result = "Error!!!"
+    default:
+      result = "Error!"
+      break;
   }
 
   resultRef.textContent = result
